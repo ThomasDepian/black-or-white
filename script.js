@@ -5,16 +5,6 @@ function strToBool(s) {
     return regex.test(s);
 }
 
-function openFullscreen() {
-    const e = document.documentElement;
-    if (e.requestFullscreen) {
-      e.requestFullscreen();
-    } else if (e.webkitRequestFullscreen) { /* Safari */
-      e.webkitRequestFullscreen();
-    } else if (e.msRequestFullscreen) { /* IE11 */
-      e.msRequestFullscreen();
-    }
-  }
 
 function isNumeric(str) {
     if (typeof str != "string") return false // we only process strings!  
