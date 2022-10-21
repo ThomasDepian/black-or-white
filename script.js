@@ -35,9 +35,9 @@ function fillCaseInfo() {
         document.getElementById("button-next-case").style.display = "none";
     } else {
         if (isNumeric(caseNr)) {
-            document.getElementById("link-next-case").setAttribute("href", `/cases/case-${(+caseNr) + 1}.html`);
+            document.getElementById("link-next-case").setAttribute("href", `/black-or-white/cases/case-${(+caseNr) + 1}.html`);
         } else {
-            document.getElementById("link-next-case").setAttribute("href", '/index.html');
+            document.getElementById("link-next-case").setAttribute("href", '/black-or-white/index.html');
         }
         
     }
