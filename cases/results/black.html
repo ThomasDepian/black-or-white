@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BLACK or WHITE | Black</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="result">
+    <section class="hero is-black is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <div class="container has-text-centered is-size-4 mt-3">
+                <p>Die Entscheidung zu Fall <span id="case-placeholder"></span> ist...</p>
+            </div>
+        </div>
+      
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <p class="title result-header">
+              BLACK
+            </p>
+            <p class="subtitle is-size-3">
+              Was spricht dafür? Was spricht dagegen?
+            </p>
+          </div>
+        </div>
+      
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <div class="container has-text-right is-size-4 mb-3" id="button-next-case">
+                <a class="button is-primary is-outlined" id="link-next-case">Weiter zum nächsten Fall</a>
+            </div>
+        </div>
+      </section>
+        <script src="/script.js"></script>
+      <script>
+        fillCaseInfo();
+      </script>
+</body>
+</html>
