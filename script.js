@@ -6,12 +6,13 @@ function strToBool(s) {
 }
 
 function openFullscreen() {
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-      elem.msRequestFullscreen();
+    const e = document.documentElement;
+    if (e.requestFullscreen) {
+      e.requestFullscreen();
+    } else if (e.webkitRequestFullscreen) { /* Safari */
+      e.webkitRequestFullscreen();
+    } else if (e.msRequestFullscreen) { /* IE11 */
+      e.msRequestFullscreen();
     }
   }
 
@@ -34,6 +35,7 @@ function fillCaseInfo() {
     if (lastCase && strToBool(lastCase)) {
         document.getElementById("button-next-case").style.display = "none";
     } else {
+        document.getElementById("button-start").style.display = "none";
         if (isNumeric(caseNr)) {
             document.getElementById("link-next-case").setAttribute("href", `/black-or-white/cases/case-${(+caseNr) + 1}.html`);
         } else {
